@@ -1,14 +1,9 @@
 \documentclass{article}
 
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
 
-% Set page size and margins
-% Replace `letterpaper' with`a4paper' for UK/EU standard size
 \usepackage[letterpaper,top=1cm,bottom=1cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 
-% Useful packages
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{multicol}
@@ -40,10 +35,8 @@
         \begin{aligned}
             &m=66.678 \unit{kg}\\
             &\vec{g}=9.81\unit{m/s^2}[D]\\
-            &\vec{a}_{su}=0.6 \unit{m/s^2}[D]\\
-            &\vec{a}_{sd}=0.8 \unit{m/s^2}[U]\\
-            % &\vec{F}_g = m\vec{g} = 66.68 \unit{kg} \cdot -9.81 \mss \\
-            % &= -654.13\unit{N} = 654.13\unit{N}[D]
+            &\vec{a}_{su}=0.8 \unit{m/s^2}[D]\\
+            &\vec{a}_{sd}=0.3 \unit{m/s^2}[U]\\
         \end{aligned}
     \end{equation*}
     \hfill
@@ -62,20 +55,15 @@
     \columnbreak
 
     \begin{tikzpicture}
-        \draw[<->] (0,-0.5) coordinate (down) -- (0, 0.5) coordinate (up);
+        \draw[<->] (0,3.5) coordinate (down) -- (0, 4.5) coordinate (up);
     
         \node at (up)[anchor=south] {$U^+$};
         \node at (down)[anchor=north] {$D^-$};
-    \end{tikzpicture}
-    
-    \begin{tikzpicture}
-  
- 
-        \draw[fill=gray!30] (-0.5, -1) rectangle (0.5, 1) coordinate (top right);
-   
+
+        \draw (-0.5, -1) rectangle (0.5, 1);
+
         \draw[->] (0, 0) -- ++ (0, 2) node [anchor=south]{$F_n$};
         \draw[->] (0, 0) -- ++ (0, -2) node [anchor=north]{$F_g$};
-    
     \end{tikzpicture}
 
 \end{multicols}
@@ -85,27 +73,27 @@
     \center{\underline{\circled{3} {Solve for speeding up}}}
     \begin{equation*}
         \begin{aligned}
-            \vec{F}_{n} &= m \vec{a} - m \vec{g}\\
-            \vec{F}_{n} &= (66.678 \unit{kg}) (-0.6\mss) - (66.68 \unit{kg})(-9.81\mss)\\
-            \vec{F}_{n} &= (66.678 \unit{kg}) (-0.6\mss) -  (-654.13 \unit{N})\\
-            \vec{F}_{n} &= (-40.008 \unit{N}) - (-654.13 \unit{N})\\
-            \vec{F}_{n} &= 614.1308 \unit{N}
+            \vec{F}_{n} &= m \vec{a}_{su} - m \vec{g}\\
+            \vec{F}_{n} &= (66.678 \unit{kg}) (-0.8\mss) - (66.68 \unit{kg})(-9.81\mss)\\
+            \vec{F}_{n} &= (66.678 \unit{kg}) (-0.8\mss) -  (-654.13 \unit{N})\\
+            \vec{F}_{n} &= (-53.342 \unit{N}) - (-654.13 \unit{N})\\
+            \vec{F}_{n} &= 600.7876 \unit{N}
         \end{aligned}
     \end{equation*}
 
-    \fbox {$\vec{F}_{n} = 614.1308 \VecUnit{N}{U}$}
+    \fbox {$\vec{F}_{n} = 600.7876 \VecUnit{N}{U}$}
 
     \center{\underline{\circled{4} {Solve for slowing down}}}
     \begin{equation*}
         \begin{aligned}
-            \vec{F}_{n} &= m \vec{a} - m \vec{g}\\
-            \vec{F}_{n} &= (66.678 \unit{kg}) (0.8\mss) - (66.68 \unit{kg})(-9.81\mss)\\
-            \vec{F}_{n} &= (66.678 \unit{kg}) (0.8\mss) - (-654.13 \unit{N})\\
-            \vec{F}_{n} &= 54.344 \unit{N} - (-654.13 \unit{N})\\
-            \vec{F}_{n} &= 707.474 \unit{N}
+            \vec{F}_{n} &= m \vec{a}_{sd} - m \vec{g}\\
+            \vec{F}_{n} &= (66.678 \unit{kg}) (0.3\mss) - (66.68 \unit{kg})(-9.81\mss)\\
+            \vec{F}_{n} &= (66.678 \unit{kg}) (0.3\mss) - (-654.13 \unit{N})\\
+            \vec{F}_{n} &= 20.003 \unit{N} - (-654.13 \unit{N})\\
+            \vec{F}_{n} &= 674.133 \unit{N}
         \end{aligned}
     \end{equation*}
-    \fbox {$\vec{F}_{n} = 707.474 \VecUnit{N}{U} $}
+    \fbox {$\vec{F}_{n} = 674.133 \VecUnit{N}{U} $}
 
 \end{multicols}
 
